@@ -1,10 +1,10 @@
 package Admin.Order_Management;
 
 import java.util.Scanner;
-
+import Admin.Order_Management.Order_Management;
 public class Order_landing {
     public void order_landing(){
-        System.out.println("1. View Pending Orders \n2. Update Order Status \n3.Process Refunds \n4.handle Special Request");
+        System.out.println("1. View Pending Orders \n2. Update Order Status \n3. Process Refunds \n4. Handle Special Request");
         Order_Management OMM1 = new Order_Management();
         Scanner S1 = new Scanner(System.in);
         int User_input = S1.nextInt();

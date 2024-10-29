@@ -9,7 +9,7 @@ import Customer.Customer_landing ;
 public class Application_page{
 	public static void application_page(){
 		while(true){
-			System.out.println("Enter 1 For Admin 2 For Customer");
+			System.out.println("1. Admin \n2. Customer");
 			Scanner S1 = new Scanner(System.in);
 			int User_input = S1.nextInt();
 			try{

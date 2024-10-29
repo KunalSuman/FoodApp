@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import Admin.Menu_Management.Menu_schema ;
 import Customer.Cart_Operations.Cart_landing;
-
+import Customer.Browse_Menu.Browse_menu_functionalities ;
 public class Browse_Menu_landing{
     public void browse_menu(String email){
         System.out.println("1. View all items \n2. Search \n3. Filter by Category \n4. Sort by Price \n5. Return");

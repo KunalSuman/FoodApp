@@ -4,6 +4,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Admin.Menu_Management.Menu_schema ;
+import Customer.Browse_Menu.Items_Interface ;
+import Customer.Browse_Menu.Browse_Menu_landing ;
 public class Browse_menu_functionalities implements Items_Interface {
     Scanner S1 = new Scanner(System.in);
     private Browse_Menu_landing BML1 = new Browse_Menu_landing();

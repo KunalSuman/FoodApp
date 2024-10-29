@@ -3,7 +3,7 @@ package Customer.Cart_Operations;
 import Customer.Customer_landing;
 
 import java.util.Scanner;
-
+import Customer.Cart_Operations.Cart_functionalities ;
 public class Cart_landing {
 
     public void cart_landing(String email) {
@@ -15,7 +15,7 @@ public class Cart_landing {
             CF1.Add_items(email);
         }
         else if(User_input == 2) {
-
+            CF1.Change_quantity(email);
         }
         else if(User_input == 3) {
             CF1.Delete_item(email);

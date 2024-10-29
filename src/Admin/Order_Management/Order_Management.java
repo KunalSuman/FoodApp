@@ -20,7 +20,8 @@ public class Order_Management {
     public void Update_status(){
         System.out.println("Enter Order id");
         int User_input = S1.nextInt();
-        String value = "";
+        S1.nextLine();
+        String value;
         for(Order_schema order : Order_schema.Orders){
             if(order.Order_id == User_input){
                 System.out.println("Enter the updated status");

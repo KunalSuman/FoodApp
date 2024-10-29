@@ -3,7 +3,8 @@ package Customer.Cart_Operations;
 import Admin.Menu_Management.Menu_schema;
 import Admin.Order_Management.Order_schema;
 import User.User_schema;
-
+import Customer.Cart_Operations.Cart_landing ;
+import Customer.Cart_Operations.User_cart;
 import java.util.Scanner;
 
 public class Cart_functionalities {
@@ -104,6 +105,7 @@ public class Cart_functionalities {
         int quantity_new ;
         for(Order_schema order : Order_schema.Orders){
             if(order.student_id.equals(email) && order.Payment != "Done" && order.item.equals(User_input)){
+                System.out.println("Change Item To");
                 quantity_new = S1.nextInt();
                 order.quantity = quantity_new ;
             }

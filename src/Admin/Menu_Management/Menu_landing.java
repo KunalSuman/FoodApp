@@ -2,7 +2,7 @@ package src.Admin.Menu_Management;
 
 import src.Admin.Menu_Management.Menu_Management;
 import Admin.Menu_Management.Menu_schema ;
-
+import src.Admin.Admin_landing ;
 import java.awt.*;
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class Menu_landing extends Menu_schema {
             Options.remove_items();
         }
         else if(User_input == 3) {
-            Options.modify_prices();
+            Options.update_items();
         }
         else if(User_input == 4) {
             Options.modify_prices();
@@ -33,7 +33,8 @@ public class Menu_landing extends Menu_schema {
             Options.update_availability();
         }
         else if(User_input == 6) {
-
+            Admin_landing AL1 = new Admin_landing();
+            AL1.admin_landing();
         }
     }
 }
