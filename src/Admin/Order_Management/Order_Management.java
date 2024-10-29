@@ -11,9 +11,8 @@ public class Order_Management {
     public void View_pending_orders(){
         System.out.println("Enter Order ID");
         for(Order_schema order : Order_schema.Orders){
-            System.out.println("hello");
             if((order.Status.equals("Pending")||order.Status.equals("pending"))&&order.Payment!="Pending"){
-                System.out.println(order.Order_id + " " + order.item +" "+order.student_id + " " +order.Payment + " " + order);
+                System.out.println("Order No. -> "+ order.Order_id + " Item -> " + order.item +" Student_id -> "+order.student_id + " Payment Status -> " +order.Payment + " Order value -> " + order.price);
             }
         }
         OM1.order_landing();
@@ -21,11 +20,12 @@ public class Order_Management {
     public void Update_status(){
         System.out.println("Enter Order id");
         int User_input = S1.nextInt();
+        String value = "";
         for(Order_schema order : Order_schema.Orders){
             if(order.Order_id == User_input){
                 System.out.println("Enter the updated status");
-                String status = S1.nextLine();
-                order.Status = status;
+                value = S1.nextLine();
+                order.Status = value;
             }
         }
         OM1.order_landing();
@@ -39,6 +39,7 @@ public class Order_Management {
                 order.Status = "Cancelled" ;
             }
         }
+        System.out.println("Refunded");
         OM1.order_landing();
     }
     public void Handle_requests(){

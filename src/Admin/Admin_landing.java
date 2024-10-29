@@ -4,6 +4,7 @@ import java.util.* ;
 
 import Admin.Order_Management.Order_Management;
 import Admin.Order_Management.Order_landing;
+import Admin.Report_Genration.Report_genration;
 import src.Admin.Menu_Management.Menu_landing;
 import src.Exception.BadInputException ;
 public class Admin_landing{
@@ -21,7 +22,8 @@ public class Admin_landing{
                 OL1.order_landing();
             }
             else if(User_input.equals("3")){
-
+                Report_genration RP1 = new Report_genration();
+                RP1.report();
             }
             else{
                 throw new BadInputException("Enter valid input");

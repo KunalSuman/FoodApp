@@ -1,4 +1,4 @@
-package src.Admin.Report_Genration;
+package Admin.Report_Genration;
 
 import Admin.Order_Management.Order_schema ;
 
@@ -8,8 +8,8 @@ public class Report_genration {
     public void report(){
         int money = 0 ;
         for(Order_schema order : Order_schema.Orders){
-            if(order.Payment != "Refunded"){
-                money = money + parseInt(order.Payment);
+            if(order.Payment.equals("Done")){
+                money = money + order.price;
             }
 
         }

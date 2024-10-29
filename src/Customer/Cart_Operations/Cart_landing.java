@@ -18,10 +18,10 @@ public class Cart_landing {
 
         }
         else if(User_input == 3) {
-
+            CF1.Delete_item(email);
         }
         else if(User_input == 4) {
-
+            CF1.View_total(email);
         }
         else if(User_input == 5) {
             CF1.Payments(email);

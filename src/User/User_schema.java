@@ -9,7 +9,7 @@ public class User_schema {
     private String Password;
     private String Email;
     public static ArrayList<User_cart> US = new ArrayList<>();
-    public static ArrayList<User_cart> cart_history = new ArrayList<>();
+    public static ArrayList<User_cart> cart_history = new ArrayList<User_cart>();
 
     public static ArrayList<User_schema> User_schema_List = new ArrayList<User_schema>();
     public User_schema(String User_name, String Password, String Email , ArrayList<User_cart> US , ArrayList<User_cart> cart_history) {
