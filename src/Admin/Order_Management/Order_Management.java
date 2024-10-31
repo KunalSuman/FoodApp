@@ -15,7 +15,7 @@ public class Order_Management {
         for(Order_schema order : Order_schema.Orders){
             for(Menu_schema item : Menu_schema.Menu.values()){
                 if((order.Status.equals("Pending")||order.Status.equals("pending"))&&order.Payment!="Pending"&& item.get_availability()==1 &&order.VIP==1 ){
-                    System.out.println("Order No. -> "+ order.Order_id + " Item -> " + order.item +" Student_id -> "+order.student_id + " Payment Status -> " +order.Payment + " Order value -> " + order.price);
+                    System.out.println("Order No. -> "+ order.Order_id + " Item -> " + order.item +" Student_id -> "+order.student_id + " Payment Status -> " +order.Payment + " Order value -> " + order.price + " Order Instruction ->" + order.Instructions);
                     break;
                 }
             }
@@ -23,7 +23,7 @@ public class Order_Management {
         for(Order_schema order : Order_schema.Orders){
             for(Menu_schema item : Menu_schema.Menu.values()){
                 if((order.Status.equals("Pending")||order.Status.equals("pending"))&&order.Payment!="Pending"&& item.get_availability()==1 &&order.VIP==0){
-                    System.out.println("Order No. -> "+ order.Order_id + " Item -> " + order.item +" Student_id -> "+order.student_id + " Payment Status -> " +order.Payment + " Order value -> " + order.price);
+                    System.out.println("Order No. -> "+ order.Order_id + " Item -> " + order.item +" Student_id -> "+order.student_id + " Payment Status -> " +order.Payment + " Order value -> " + order.price + " Order Instruction ->" + order.Instructions);
                     break;
                 }
             }

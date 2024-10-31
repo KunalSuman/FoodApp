@@ -53,7 +53,9 @@ public class Cart_functionalities {
             }
         }
         for(User_cart user : User_cart.user_cart){
-            total_cost = total_cost + user.price;
+            if(user.user_id.equals(email)){
+                total_cost = total_cost + user.price;
+            }
         }
         System.out.println("Total cost : " + total_cost );
         CL1.cart_landing(email);
@@ -97,6 +99,7 @@ public class Cart_functionalities {
                     }
                 }
                 System.out.println("Payment Done");
+                User_cart.user_cart.clear();
             }
             if(User_input == 2){
                 CL1.cart_landing(email);
@@ -116,6 +119,7 @@ public class Cart_functionalities {
                     }
                 }
                 System.out.println("Payment Done");
+                User_cart.user_cart.clear();
             }
             if(User_input == 2){
                 CL1.cart_landing(email);

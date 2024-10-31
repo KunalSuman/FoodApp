@@ -5,6 +5,7 @@ import Customer.Browse_Menu.Browse_Menu_landing;
 import Customer.Cart_Operations.Cart_landing;
 import Admin.Menu_Management.Menu_schema;
 import Customer.Order_Tracking.Order_Tracking_landing ;
+import page.Customer.Review.Review_Landing;
 import page.Customer.Vip_status;
 
 import java.util.Scanner;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 public class Customer_landing{
     private Scanner S1 = new Scanner(System.in);
     public void customer_landing(String email){
-        System.out.println("1.Browse Menu \n2.Cart Options \n3.Order Tracking \n4.VIP status \n5.Return");
+        System.out.println("1.Browse Menu \n2.Cart Options \n3.Order Tracking \n4.VIP status \n6.Return");
         int User_Input = S1.nextInt();
         if(User_Input == 1){
             Browse_Menu_landing B1 = new Browse_Menu_landing();
@@ -31,6 +32,10 @@ public class Customer_landing{
             VIP1.vip(email);
         }
         if(User_Input == 5){
+            Review_Landing RL1 = new Review_Landing();
+            RL1.review_landing(email);
+        }
+        if(User_Input == 6){
             page.Application_page.application_page();
         }
     }
