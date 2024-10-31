@@ -13,9 +13,12 @@ public class Order_schema {
     public int quantity ;
     public int Order_id ;
     public int price ;
+    public String address ;
+    public int VIP ;
+    public String Instructions ;
     public static Queue<Order_schema> Orders = new LinkedList<Order_schema>() ;
 
-    public Order_schema(String item ,String student_id ,String Status ,String Payment , int quantity ,int Order_id ,int price ) {
+    public Order_schema(String item ,String student_id ,String Status ,String Payment , int quantity ,int Order_id ,int price , String address ,int VIP ,String Instructions ) {
         this.item = item;
         this.student_id = student_id;
         this.Payment = Payment;
@@ -23,5 +26,8 @@ public class Order_schema {
         this.quantity = quantity;
         this.Order_id = Order_id;
         this.price = price;
+        this.address = address;
+        this.VIP = VIP;
+        this.Instructions = Instructions;
     }
 }

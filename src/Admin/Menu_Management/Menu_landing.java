@@ -10,12 +10,12 @@ public class Menu_landing extends Menu_schema {
     private Scanner S1 = new Scanner(System.in);
 
     public Menu_landing(String item, int price, int availability) {
-        super(item, price, availability);
+        super(item, price, availability,null);
     }
 
     public void menu_landing() {
         System.out.println("1.Add Item \n2.Remove Item \n3.Update Item \n4.Update Price \n5.Update Availability");
-        Menu_Management Options = new Menu_Management("", 0 , 0);
+        Menu_Management Options = new Menu_Management("", 0 , 0,null);
         int User_input = S1.nextInt();
         if(User_input == 1) {
             Options.Add_items();
