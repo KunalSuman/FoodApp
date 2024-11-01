@@ -7,6 +7,7 @@ import User.User_schema;
 
 import java.util.Scanner;
 
+
 public class Order_Management {
     private Order_schema O1;
     private Order_landing OM1 =new Order_landing();
@@ -57,6 +58,10 @@ public class Order_Management {
         OM1.order_landing();
     }
     public void Handle_requests(){
-
+        for(Order_schema order : Order_schema.Orders){
+            if(order.Instructions.length() > 0){
+                System.out.println(order.Order_id + order.item + order.Instructions);
+            }
+        }
     }
 }

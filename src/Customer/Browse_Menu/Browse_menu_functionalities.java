@@ -31,7 +31,15 @@ public class Browse_menu_functionalities implements Items_Interface {
 
     @Override
     public void Filter_category(String email) {
-
+        System.out.println("Enter the category");
+        String User_input = S1.nextLine();
+        for(Menu_schema items : Menu_schema.Menu.values()){
+            for(String item : items.get_category()){
+                if(item.equals(User_input)){
+                    System.out.println(items.get_item() + " " + items.get_price() + " " + items.get_availability());
+                }
+            }
+        }
     }
 
     @Override

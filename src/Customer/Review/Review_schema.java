@@ -22,4 +22,7 @@ public class Review_schema {
     public void setReview(String review) {
         this.review = review;
     }
+    public String toString() {
+        return email + " : " + review;
+    }
 }

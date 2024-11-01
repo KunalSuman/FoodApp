@@ -9,7 +9,7 @@ public class Review_Landing {
         System.out.println("1.Check Review \n2.Add Review");
         String user_input = S1.nextLine();
         if(user_input.equals("1")){
-            RF1.check_review();
+            RF1.check_review(email);
         }
         if(user_input.equals("2")){
             RF1.add_review(email);

@@ -6,6 +6,7 @@ import src.Admin.Management_interface ;
 import java.util.ArrayList;
 import java.util.Scanner;
 import src.Admin.Menu_Management.Menu_landing;
+import Admin.Order_Management.Order_schema ;
 public class Menu_Management extends Menu_schema implements Management_interface {
     public Scanner S1 = new Scanner (System.in);
     public Menu_landing M1 = new Menu_landing("",0,0);
@@ -44,9 +45,15 @@ public class Menu_Management extends Menu_schema implements Management_interface
             System.out.println(item.get_item());
             if(item.get_item().equals(Input_item)){
                 item.set_availability(0);
-                MenuSet.remove(item);
+                for(Order_schema orders : Order_schema.Orders){
+                    if(orders.item.equals(Input_item)){
+                        orders.Status = "denied" ;
+                    }
+                }
+                //MenuSet.remove(item);
             }
         }
+
         M1.menu_landing();
     }
 

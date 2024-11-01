@@ -1,9 +1,6 @@
 package Admin.Order_Management;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Order_schema {
     public String item ;
@@ -17,6 +14,7 @@ public class Order_schema {
     public int VIP ;
     public String Instructions ;
     public static Queue<Order_schema> Orders = new LinkedList<Order_schema>() ;
+    public static HashMap<String , Integer> order_frequency = new HashMap<>() ;
 
     public Order_schema(String item ,String student_id ,String Status ,String Payment , int quantity ,int Order_id ,int price , String address ,int VIP ,String Instructions ) {
         this.item = item;

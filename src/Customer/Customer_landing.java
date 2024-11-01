@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Customer_landing{
     private Scanner S1 = new Scanner(System.in);
     public void customer_landing(String email){
-        System.out.println("1.Browse Menu \n2.Cart Options \n3.Order Tracking \n4.VIP status \n6.Return");
+        System.out.println("1.Browse Menu \n2.Cart Options \n3.Order Tracking \n4.VIP status \n5.Review \n6.Return");
         int User_Input = S1.nextInt();
         if(User_Input == 1){
             Browse_Menu_landing B1 = new Browse_Menu_landing();

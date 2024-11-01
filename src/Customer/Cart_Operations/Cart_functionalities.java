@@ -14,6 +14,8 @@ public class Cart_functionalities {
 
     public void Add_items(String email , int VIP) {
         while(true){
+            int checker = 0 ;
+            int repeat = 0 ;
             System.out.println("PRESS Q -> EXIT");
             Cart_landing CL1 = new Cart_landing();
             int price =0;
@@ -21,25 +23,41 @@ public class Cart_functionalities {
 
             System.out.println("Select item");
             String select_item = S1.nextLine();
-
             if(select_item.equals("q")){
                 break ;
             }
-
-            System.out.println("Enter quantity");
-            int quantity = S1.nextInt();
-
-            for(Menu_schema menu : Menu_schema.MenuSet){
-                if(menu.get_item().equals(select_item)){
-                    price = menu.get_price()*quantity;
+            for(Order_schema orders : Order_schema.Orders){
+                if(orders.student_id.equals(email) && orders.item.equals(select_item)){
+                    repeat = 1 ;
                 }
             }
-            System.out.println(price);
-            User_cart.user_cart.add(new User_cart(select_item, "NULL", price, quantity,"Pending"));
-            //       User_schema.US.add(new User_cart(select_item, "NULL", price, quantity));
-            System.out.println("Add Successfully");
-            Order_schema OS1 =new Order_schema(select_item, email, "Pending" , "Pending",quantity,User_cart.user_cart.size() ,price , " " , VIP ," ");
-            Order_schema.Orders.add(OS1);
+            if(repeat == 0){
+                for(Menu_schema items_check : Menu_schema.MenuSet){
+                    if(items_check.get_item().equals(select_item) && items_check.get_availability() == 1){
+                        System.out.println("Enter quantity");
+                        int quantity = S1.nextInt();
+
+                        for(Menu_schema menu : Menu_schema.MenuSet){
+                            if(menu.get_item().equals(select_item)){
+                                price = menu.get_price()*quantity;
+                            }
+                        }
+                        System.out.println(price);
+                        User_cart.user_cart.add(new User_cart(select_item, email, price, quantity,"Pending"));
+                        //       User_schema.US.add(new User_cart(select_item, "NULL", price, quantity));
+                        System.out.println("Add Successfully");
+                        Order_schema OS1 =new Order_schema(select_item, email, "Pending" , "Pending",quantity,User_cart.user_cart.size() ,price , " " , VIP ," ");
+                        Order_schema.Orders.add(OS1);
+                        checker = 1 ;
+                    }
+                }
+                if(checker == 0){
+                    System.out.println("Enter valid item");
+                }
+            }
+            if(repeat == 1){
+                System.out.println("For Change quantites");
+            }
         }
         CL1.cart_landing(email);
     }
@@ -68,6 +86,12 @@ public class Cart_functionalities {
         for(Order_schema order : Order_schema.Orders){
             if(order.student_id.equals(email) && order.item.equals(User_input)){
                 Order_schema.Orders.remove(order);
+
+            }
+        }
+        for(User_cart user : User_cart.user_cart){
+            if(user.user_id.equals(email) && user.item.equals(User_input)){
+                User_cart.user_cart.remove(user);
             }
         }
         CL1.cart_landing(email);
@@ -76,7 +100,9 @@ public class Cart_functionalities {
     public void Payments(String email){
         int total_cost = 0 ;
         for(User_cart user : User_cart.user_cart){
-            total_cost = total_cost + user.price;
+            if(user.user_id.equals(email)){
+                total_cost = total_cost + user.price;
+            }
         }
         Scanner S2 = new Scanner(System.in);
         System.out.println("Total cost : "+total_cost);
@@ -90,16 +116,15 @@ public class Cart_functionalities {
             String address = S2.nextLine();
             System.out.println("Enter 1 to Confirm 2 to return");
             int User_input = S2.nextInt();
-            if(User_input == 1){
-                for(Order_schema order : Order_schema.Orders){
-                    if(order.student_id.equals(email) && order.Payment.equals("Pending")){
+            if(User_input == 1) {
+                for (Order_schema order : Order_schema.Orders) {
+                    if (order.student_id.equals(email) && order.Payment.equals("Pending")) {
                         order.Payment = "Done";
                         order.address = address;
                         order.Instructions = user_instruction;
                     }
                 }
                 System.out.println("Payment Done");
-                User_cart.user_cart.clear();
             }
             if(User_input == 2){
                 CL1.cart_landing(email);
@@ -119,7 +144,12 @@ public class Cart_functionalities {
                     }
                 }
                 System.out.println("Payment Done");
-                User_cart.user_cart.clear();
+                for(User_cart user : User_cart.user_cart){
+                    if(user.user_id.equals(email)){
+                        User_cart.user_cart.remove(user);
+                    }
+                }
+
             }
             if(User_input == 2){
                 CL1.cart_landing(email);
