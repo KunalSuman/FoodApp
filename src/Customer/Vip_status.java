@@ -1,6 +1,6 @@
 package page.Customer;
 
-import User.User_schema ;
+import page.User.User_schema ;
 
 import java.util.Scanner;
 

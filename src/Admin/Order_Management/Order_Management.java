@@ -3,7 +3,7 @@ package Admin.Order_Management;
 import Admin.Order_Management.Order_schema ;
 import Admin.Order_Management.Order_landing ;
 import Admin.Menu_Management.Menu_schema ;
-import User.User_schema;
+import page.User.User_schema;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
 package Customer.Cart_Operations;
 
 import Customer.Customer_landing;
-import User.User_schema;
+import page.User.User_schema;
 import java.util.Scanner;
 import Customer.Cart_Operations.Cart_functionalities ;
 public class Cart_landing {

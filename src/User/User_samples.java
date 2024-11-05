@@ -1,7 +1,7 @@
 package User;
 
 
-import User.User_schema ;
+import page.User.User_schema ;
 public class User_samples {
     public static void user_samples(){
         User_schema S1 = new User_schema("Kunal","123","kunal@iiitd.ac.in",null,null, 0);

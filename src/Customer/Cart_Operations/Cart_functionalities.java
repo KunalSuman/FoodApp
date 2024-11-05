@@ -2,7 +2,7 @@ package Customer.Cart_Operations;
 
 import Admin.Menu_Management.Menu_schema;
 import Admin.Order_Management.Order_schema;
-import User.User_schema;
+import page.User.User_schema;
 import Customer.Cart_Operations.Cart_landing ;
 import Customer.Cart_Operations.User_cart;
 import java.util.Scanner;

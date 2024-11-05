@@ -14,7 +14,7 @@ public class Menu_landing extends Menu_schema {
     }
 
     public void menu_landing() {
-        System.out.println("1.Add Item \n2.Remove Item \n3.Update Item \n4.Update Price \n5.Update Availability");
+        System.out.println("1.Add Item \n2.Remove Item \n3.Update Item \n4.Update Price \n5.Update Availability \n6.Return");
         Menu_Management Options = new Menu_Management("", 0 , 0,null);
         int User_input = S1.nextInt();
         if(User_input == 1) {

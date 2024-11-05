@@ -1,4 +1,4 @@
-package User;
+package page.User;
 
 import Customer.Cart_Operations.User_cart;
 
@@ -30,5 +30,8 @@ public class User_schema {
     }
     public void setVIP(int VIP) {
         this.VIP = VIP;
+    }
+    public String getPassword() {
+        return Password;
     }
 }

@@ -12,6 +12,7 @@ public class Browse_menu_functionalities implements Items_Interface {
     @Override
     public void View_items(String email) {
         for(Menu_schema items : Menu_schema.Menu.values()){
+            System.out.println("ITEM NAME " + " " + "ITEM PRICE" + " " + "ITEM AVAILABILITY 1->AVAILABLE  0->NOT AVAILABLE");
             System.out.println(items.get_item() + " " + items.get_price() + " " + items.get_availability());
         }
         BML1.browse_menu(email);
