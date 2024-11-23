@@ -1,0 +1,3 @@
+Kunal,123,kunal@iiitd.ac.in,0
+jagan,123,jagan@iiitd.ac.in,0
+aman,123,aman@iiitd.ac.in,1

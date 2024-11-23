@@ -1,7 +1,7 @@
-
-import User.User_samples;
-import page.Customer.Review.Review_sample;
-import src.Admin.Menu_Management.Menu_sample ;
+package page;
+import page.server.User.User_samples;
+import page.server.Customer.Review.Review_sample;
+import page.server.Admin.Menu_Management.Menu_sample ;
 
 class Main{
 	public static void main(String[] args){

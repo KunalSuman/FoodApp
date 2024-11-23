@@ -3,7 +3,7 @@ components : Admin
              User
 
 Data_Structures used are ArrayList for carts LinkedList and queue for management of orders and payments , use of TreeMap and TreeSets for Menu and Menu_schema and Hashmap for reviews management
-
+Date changed is controlled by Sennsion time so each termination will count for date change:wq
 
 Admin consists of functions of Menu_management , Order_Management ,Report_orientation , Admin_landing class and Management_interface these classes encapulation and other oops concept
             Menu_management class extends menu_sample and implements management_interface and this same for Menu_landing extends Menu_schema
@@ -16,7 +16,7 @@ Customer consists of Browse_Menu , Cart_options ,Order_tracking , Review ,Custom
             Reviews contains functionality class landing class sample class and schema class 
             Customer landing and vip status 
 
-Finally User page coso=ists fo userfunctions such as sign signup and samples
+Finally User page coso=ists fo userfunctions such as sign signup and samples 
 
 
 .
