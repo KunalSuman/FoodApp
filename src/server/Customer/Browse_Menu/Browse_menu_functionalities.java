@@ -46,6 +46,7 @@ public class Browse_menu_functionalities implements Items_Interface {
                 }
             }
         }
+        BML1.browse_menu(email);
     }
 
     @Override

@@ -58,7 +58,6 @@ public class Menu_client extends JFrame {
         B1.setBounds(300,100,100,40);
         add(B1);
         B1.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 Browse_Menu_landing B1 = new Browse_Menu_landing();

@@ -66,7 +66,6 @@ class Application_page_if extends JFrame{
 		});
 		Customer_Button.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-
 				Customer_page_if CP1 = new Customer_page_if();
 				dispose();
 			}
@@ -91,7 +90,6 @@ class Customer_page_if extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		B1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-
 				SignIN SN1 = new SignIN();
 				dispose();
 			}
@@ -99,7 +97,6 @@ class Customer_page_if extends JFrame{
 
 		B2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-
 				SignUP SU1 = new SignUP();
 				dispose();
 			}

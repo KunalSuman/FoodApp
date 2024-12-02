@@ -4,6 +4,8 @@ import page.server.Admin.Menu_Management.Menu_schema;
 import page.server.Admin.Order_Management.Order_schema;
 import page.server.User.User_schema;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -50,6 +52,13 @@ public class Cart_functionalities {
                         Order_schema OS1 =new Order_schema(select_item, email, "Pending" , "Pending",quantity,User_cart.user_cart.size() ,price , " " , VIP ," ");
                         Order_schema.Orders.add(OS1);
                         checker = 1 ;
+                        try{
+                            BufferedOutputStream BF1 = new BufferedOutputStream(new FileOutputStream("Orders.txt",true));
+                            BF1.write((select_item + "," + quantity + "\n").getBytes());
+                            BF1.close();
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
                     }
                 }
                 if(checker == 0){
@@ -165,6 +174,12 @@ public class Cart_functionalities {
             }
             if(User_input == 2){
                 CL1.cart_landing(email);
+            }
+            try{
+                BufferedOutputStream BF1 = new BufferedOutputStream(new FileOutputStream("Orders.txt"));
+                BF1.close();
+            }catch (Exception e){
+                e.printStackTrace();
             }
             CL1.cart_landing(email);
         }

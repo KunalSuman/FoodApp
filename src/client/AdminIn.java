@@ -1,5 +1,6 @@
 package page.client;
 
+import page.Application_page;
 import page.server.Admin.Admin_landing;
 import page.server.Admin.Menu_Management.Menu_landing;
 import page.server.Admin.Order_Management.Order_landing;
@@ -18,10 +19,14 @@ public class AdminIn extends JFrame {
 		JButton B1 = new JButton("Menu Management");
 		JButton B2 = new JButton("Order management");
 		JButton B3 = new JButton("Report Genration");
+		JButton B4 = new JButton("Back");
 		setLayout(null);
+
 		B1.setBounds(980,500,100,50);
 		B2.setBounds(980,600,100,50);
 		B3.setBounds(980,700,100,50);
+		B4.setBounds(980,400,100,50);
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		B1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -41,6 +46,13 @@ public class AdminIn extends JFrame {
 				RP1.report();
 			}
 		});
+		B4.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				Application_page Ap1 = new Application_page();
+				Ap1.application_page();
+			}
+		});
+		add(B4);
 		add(B1);
 		add(B2);
 		add(B3);

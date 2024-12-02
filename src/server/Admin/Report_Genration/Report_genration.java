@@ -33,7 +33,7 @@ public class Report_genration {
                 freqs_o.add(fre_q);
             }
         }
-        System.out.println("money genrated " + money + "Total Orders " + Order_schema.Orders.size() + " Frequency " + "Highest is" +freqs_o.getLast() + Order_schema.order_frequency);
+        System.out.println("money genrated " + money + "Total Orders " + Order_schema.Orders.size() + " Frequency " + "Highest is" +freqs_o.get(freqs_o.size() - 1) + Order_schema.order_frequency);
         Admin_landing AL1 = new Admin_landing();
         AL1.admin_landing();
     }

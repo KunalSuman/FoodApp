@@ -1,6 +1,5 @@
  ABC,500,0
- BK,300,1
- KFC,200,1
- McD,100,1
+ McD,100,10000
  Popyes,400,1
- asdaw,1322,1
+ bsdjc,2,1
+ fej,21,1
